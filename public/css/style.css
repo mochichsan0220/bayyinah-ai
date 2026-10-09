@@ -1,0 +1,127 @@
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.7);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.9);
+}
+
+/* Arabic Text Block */
+.arabic-text {
+  font-family: 'Amiri', serif;
+  font-size: 1.4rem;
+  line-height: 2.3;
+  text-align: right;
+  direction: rtl;
+  color: #0f172a;
+  background: #f0fdf4;
+  border-right: 3px solid #10b981;
+  padding: 0.85rem 1.15rem;
+  border-radius: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+/* Sparkle Animation */
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.92;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 4s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Citation Badges */
+.citation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.citation-badge:hover {
+  background-color: #d1fae5;
+  transform: translateY(-1px);
+}
+
+.citation-badge-hadith {
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.citation-badge-hadith:hover {
+  background-color: #fef3c7;
+}
+
+/* Typography in Chat Responses */
+.chat-markdown p {
+  margin-bottom: 0.75rem;
+  line-height: 1.65;
+  color: #334155;
+}
+
+.chat-markdown p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-markdown ul, .chat-markdown ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #334155;
+}
+
+.chat-markdown ul {
+  list-style-type: disc;
+}
+
+.chat-markdown ol {
+  list-style-type: decimal;
+}
+
+.chat-markdown li {
+  margin-bottom: 0.35rem;
+}
+
+.chat-markdown strong {
+  color: #0f172a;
+  font-weight: 600;
+}

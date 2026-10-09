@@ -1,0 +1,95 @@
+/* Premium dark glassmorphic chat UI */
+:root {
+  --bg-primary: #0b1120; /* dark navy */
+  --bg-card: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --accent: #4f46e5; /* indigo-600 */
+  --text-primary: #e5e7eb;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-wrapper {
+  width: 100%;
+  max-width: 480px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(12px);
+  background: var(--glass-bg);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.msg {
+  margin-bottom: 1rem;
+}
+
+.msg.user { text-align: right; }
+.msg.bot { text-align: left; }
+
+.bubble {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  max-width: 80%;
+  line-height: 1.4;
+}
+
+.bubble.user {
+  background: var(--accent);
+  color: #fff;
+}
+
+.bubble.bot {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.input-area {
+  display: flex;
+  border-top: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.input-area input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-area button {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.input-area button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
